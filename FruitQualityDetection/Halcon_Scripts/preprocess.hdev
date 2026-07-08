@@ -1,0 +1,12 @@
+* 输入: Image
+* 输出: EnhancedImage
+
+get_image_size (Image, Width, Height)
+decompose3 (Image, R, G, B)
+trans_from_rgb (R, G, B, H, S, V, 'hsv')
+median_image (Image, ImageMedian, 'circle', 3, 'mirrored')
+gauss_filter (ImageMedian, ImageGauss, 5)
+emphasize (ImageGauss, ImageEmphasize, 7, 7, 1.0)
+sobel_amp (ImageEmphasize, EdgeAmplitude, 'sum_abs', 3)
+EnhancedImage := ImageEmphasize
+clear_obj ([R,G,B,H,S,V,ImageMedian,ImageGauss,EdgeAmplitude])

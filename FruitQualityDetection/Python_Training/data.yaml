@@ -1,0 +1,9 @@
+path: D:/FruitQualityDetection/Python_Training/dataset   # 【修改】你的绝对路径
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: apple
+  1: banana
+  2: orange
